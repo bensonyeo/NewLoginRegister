@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect("my_host, "my_user", "my_password", "my_db");
+$con = mysqli_connect("mysql4.000webhost.com", "a7561257_MyApp", "MyApplication123", "a7561257_MyApp");
 
 $name = $_POST["name"];
 $age = $_POST["age"];
@@ -15,3 +15,6 @@ $response["success"] = true;
 
 echo json_encode($response);
 ?>
+
+
+
