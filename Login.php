@@ -1,14 +1,14 @@
 <?php
-$con = mysqli_connect("my_host, "my_user", "my_password", "my_db");
+$con = mysqli_connect("mysql4.000webhost.com	, "	a7561257_MyApp", "MyApplication123", "a7561257_MyApp");
 
-$username = $_POST("username");
-$password = $_POST("password");
+$username = $_POST["username"];
+$password = $_POST["password"];
 
 $statement = mysqli_prepare($con, "SELECT * FROM user WHERE username = ? AND password = ?");
 mysqli_stmt_bind_param($statement, "ss", $username, $password);
-mysqli_stmt_execute($$statement);
+mysqli_stmt_execute($statement);
 
-mysqli_stmt_store_results($statement);
+mysqli_stmt_store_result($statement);
 mysqli_stmt_bind_result($statment, $userID, $name, $age, $username, $password);
 
 $response = array();
